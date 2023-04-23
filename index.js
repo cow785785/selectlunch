@@ -20,6 +20,15 @@ const options = [
     ],
     value: "chinese",
     checked: false,
+    imagePath: [
+      "images/chicken_rice.jpg",
+      "images/duck_rice.jpg",
+      "images/braised_pork_rice.jpg",
+      "images/braised_food.jpg",
+      "images/duck_noodle.jpg",
+      "images/fried_instant_noodle.jpg",
+      "images/vege_soybean_paste_noodle.jpg",
+    ],
   },
   {
     name: [
@@ -47,6 +56,7 @@ const options = [
       "卡酥來砂鍋 Cassoulet",
       "紅酒燉牛肉 Bœuf bourguignon",
       "火上鍋 Pot-au-feu",
+      "淡菜鍋 Moules marinières",
       "馬賽魚湯 Bouillabaisse",
       "普羅旺斯燉菜 Ratatouille",
       "尼斯沙拉 Salade Niçoise",
@@ -55,6 +65,15 @@ const options = [
     ],
     value: "france",
     checked: false,
+    imagePath: [
+      "../img/法式/法式洋蔥湯.jpg",
+      "../img/法式/鵝肝醬鴨肝醬.jpg",
+      "../img/法式/法式洋蔥湯.jpg",
+      "../img/法式/法式洋蔥湯.jpg",
+      "../img/法式/法式洋蔥湯.jpg",
+      "../img/法式/法式洋蔥湯.jpg",
+      "../img/法式/法式洋蔥湯.jpg",
+    ],
   },
   {
     name: [
@@ -111,44 +130,7 @@ const options = [
     checked: false,
   },
 ];
-if (chinese.checked) {
-  // 選擇一個時取消其他按鈕
-  west.checked = false;
-  france.checked = false;
-  america.checked = false;
-  tai.checked = false;
-  tea.checked = false;
-} else if (west.checked) {
-  chinese.checked = false;
-  france.checked = false;
-  america.checked = false;
-  tai.checked = false;
-  tea.checked = false;
-} else if (france.checked) {
-  chinese.checked = false;
-  west.checked = false;
-  america.checked = false;
-  tai.checked = false;
-  tea.checked = false;
-} else if (america.checked) {
-  chinese.checked = false;
-  france.checked = false;
-  west.checked = false;
-  tai.checked = false;
-  tea.checked = false;
-} else if (tai.checked) {
-  chinese.checked = false;
-  france.checked = false;
-  america.checked = false;
-  west.checked = false;
-  tea.checked = false;
-} else if (tea.checked) {
-  chinese.checked = false;
-  france.checked = false;
-  america.checked = false;
-  tai.checked = false;
-  west.checked = false;
-}
+
 // 監聽按鈕點擊事件
 btn.addEventListener("click", function () {
   // 過濾選中的選項
@@ -156,6 +138,44 @@ btn.addEventListener("click", function () {
   if (selectedOptions.length === 0) {
     ptext.innerText = "請至少選擇一個選項";
     return;
+  }
+  if (chinese.checked) {
+    // 選擇一個時取消其他按鈕
+    west.checked = false;
+    france.checked = false;
+    america.checked = false;
+    tai.checked = false;
+    tea.checked = false;
+  } else if (west.checked) {
+    chinese.checked = false;
+    france.checked = false;
+    america.checked = false;
+    tai.checked = false;
+    tea.checked = false;
+  } else if (france.checked) {
+    chinese.checked = false;
+    west.checked = false;
+    america.checked = false;
+    tai.checked = false;
+    tea.checked = false;
+  } else if (america.checked) {
+    chinese.checked = false;
+    france.checked = false;
+    west.checked = false;
+    tai.checked = false;
+    tea.checked = false;
+  } else if (tai.checked) {
+    chinese.checked = false;
+    france.checked = false;
+    america.checked = false;
+    west.checked = false;
+    tea.checked = false;
+  } else if (tea.checked) {
+    chinese.checked = false;
+    france.checked = false;
+    america.checked = false;
+    tai.checked = false;
+    west.checked = false;
   }
   // 隨機選擇一個選項
   const randomIndex = Math.floor(Math.random() * selectedOptions.length);
@@ -180,58 +200,3 @@ options.forEach((option) => {
     ptext.innerText = `今天午餐推薦：${randomMealName}`;
   });
 });
-// chinese.addEventListener("change", () => {
-//   if (chinese.checked) {
-//     // 選擇一個時取消其他按鈕
-//     west.checked = false;
-//     france.checked = false;
-//     america.checked = false;
-//     tai.checked = false;
-//     tea.checked = false;
-//   }
-// });
-// west.addEventListener("change", () => {
-//   if (west.checked) {
-//     chinese.checked = false;
-//     france.checked = false;
-//     america.checked = false;
-//     tai.checked = false;
-//     tea.checked = false;
-//   }
-// });
-// france.addEventListener("change", () => {
-//   if (france.checked) {
-//     chinese.checked = false;
-//     west.checked = false;
-//     america.checked = false;
-//     tai.checked = false;
-//     tea.checked = false;
-//   }
-// });
-// america.addEventListener("change", () => {
-//   if (america.checked) {
-//     chinese.checked = false;
-//     france.checked = false;
-//     west.checked = false;
-//     tai.checked = false;
-//     tea.checked = false;
-//   }
-// });
-// tai.addEventListener("change", () => {
-//   if (tai.checked) {
-//     chinese.checked = false;
-//     france.checked = false;
-//     america.checked = false;
-//     west.checked = false;
-//     tea.checked = false;
-//   }
-// });
-// tea.addEventListener("change", () => {
-//   if (tea.checked) {
-//     chinese.checked = false;
-//     france.checked = false;
-//     america.checked = false;
-//     tai.checked = false;
-//     west.checked = false;
-//   }
-// });
