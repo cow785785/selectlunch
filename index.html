@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>隨機選擇午餐系統</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>午餐困難選擇器</h1>
+    <div class="selectarea">
+      <div>
+        <label for="類型">中式</label>
+        <input type="checkbox" id="chinese" value="chinese" />
+      </div>
+
+      <div>
+        <label for="類型">西式</label>
+        <input type="checkbox" id="west" value="west" />
+      </div>
+
+      <div>
+        <label for="類型">法式</label>
+        <input type="checkbox" id="france" value="france" />
+      </div>
+
+      <div>
+        <label for="類型">美式</label>
+        <input type="checkbox" id="america" value="america" />
+      </div>
+
+      <div>
+        <label for="類型">台式</label>
+        <input type="checkbox" id="tai" value="tai" />
+      </div>
+      <div>
+        <label for="類型">飛田新地</label>
+        <input type="checkbox" id="tea" value="tea" />
+      </div>
+    </div>
+    <div class="end">
+      <h2>
+        幫你選擇的是
+        <p id="ptext"></p>
+      </h2>
+      <div class="img"></div>
+      <button id="btn">選擇</button>
+    </div>
+    <script src="./index.js"></script>
+    <script src="./img.js"></script>
+  </body>
+</html>

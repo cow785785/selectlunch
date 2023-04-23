@@ -1,0 +1,37 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.selectarea {
+  margin: 20px;
+  input {
+    width: 25px;
+    height: 25px;
+  }
+  font-size: 2rem;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+  button {
+    width: 45px;
+    height: 25px;
+  }
+}
